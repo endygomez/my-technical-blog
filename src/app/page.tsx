@@ -1,4 +1,3 @@
-import { siteTitle } from "@/app/layout";
 import { getSortedPostsData } from "@/lib/posts";
 import Date from "@/components/Date";
 import Link from "next/link";
@@ -10,10 +9,10 @@ type AllPostsData = {
   id: string;
 }[];
 
-export const metadata = {
-  title: siteTitle,
-  description: "Este es un sitio web de muestra creado con Next.js",
-};
+// export const metadata = {
+//   title: '',
+//   description: "Este es un sitio web de muestra creado con Next.js",
+// };
 
 export default function Home() {
   const allPostsData: AllPostsData = getSortedPostsData();
