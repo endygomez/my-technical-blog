@@ -48,6 +48,8 @@ export default function Home() {
             .
             <button
               type="button"
+              role="button"
+              aria-label="Mis artículos"
               className="flex items-center justify-center w-12 h-12 pt-12 rounded-full bg-cool-gray-100 text-gray-800 animate-bounce hover:text-gray-900 hover:bg-cool-green-50 transition duration-300 ease-in-out cursor-pointer"
             >
               <Link href={"#my-articles"}>
