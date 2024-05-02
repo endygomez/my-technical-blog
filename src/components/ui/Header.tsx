@@ -1,14 +1,10 @@
 "use client";
 
-import Image from "next/image";
-import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
-interface Props {
-  name: string;
-}
-const Header = ({ name }: Props) => {
+interface Props {}
+const Header = ({}: Props) => {
   const pathName = usePathname();
 
   return (
