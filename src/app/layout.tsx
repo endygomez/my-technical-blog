@@ -11,6 +11,15 @@ export const metadata: Metadata = {
   title: "Endy Gómez - DevOps Expert",
   description:
     "Endy Gómez es un Desarrollador de Software experto en DevOps. Él es un apasionado de la tecnología y le gusta compartir conocimiento con otras personas.",
+  keywords: [
+    "DevOps",
+    "Automatización de procesos",
+    "Entrega continua (CI/CD)",
+    "Eficiencia operativa",
+    "Transformación digital",
+    "Especialista en DevOps",
+    "Soluciones para PYMES y Grandes Empresas",
+  ],
 };
 
 export default function RootLayout({

@@ -1,6 +1,18 @@
 ---
 title: 'DevOps hasta en la "Sopa" 🍲'
 date: "2024-04-30"
+keywords:
+  [
+    "DevOps",
+    "Automatización de procesos",
+    "Construcción y entrega de software",
+    "PYMES",
+    "Grandes Empresas",
+    "Entrega continua (CI/CD)",
+    "Eficiencia operativa",
+    "Herramientas de DevOps",
+    "Transformación digital",
+  ]
 ---
 
 Mi pareja y yo salimos al mercado al menos una vez a la semana, y una de las compras más comunes que hacemos son las carnes para cubrir las proteínas del almuerzo, las cuales solemos pedir por porciones, y listas para congelar.

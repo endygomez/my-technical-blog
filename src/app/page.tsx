@@ -9,11 +9,6 @@ type AllPostsData = {
   id: string;
 }[];
 
-// export const metadata = {
-//   title: '',
-//   description: "Este es un sitio web de muestra creado con Next.js",
-// };
-
 export default function Home() {
   const allPostsData: AllPostsData = getSortedPostsData();
 
@@ -29,7 +24,7 @@ export default function Home() {
                 className="rounded-full"
                 height={170}
                 width={170}
-                alt=""
+                alt="Foto de Perfil"
               />
             </div>
             <div className="text-center sm:text-xl pt-6">Endy Gómez</div>

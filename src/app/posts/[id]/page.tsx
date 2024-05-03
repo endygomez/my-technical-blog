@@ -13,6 +13,7 @@ type Props = {
 type PostData = {
   title: string;
   date: string;
+  keywords: string[];
   contentHtml: string;
 };
 
@@ -21,6 +22,7 @@ export async function generateMetadata({ params }: Props) {
 
   return {
     title: postData.title,
+    keywords: postData.keywords,
   };
 }
 
