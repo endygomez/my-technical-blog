@@ -1,6 +1,7 @@
 import Date from "@/components/Date";
 
 import { getPostData } from "@/lib/posts";
+import Image from "next/image";
 
 type Params = {
   id: string;
@@ -13,6 +14,7 @@ type Props = {
 type PostData = {
   title: string;
   date: string;
+  image: string;
   keywords: string[];
   contentHtml: string;
 };
@@ -36,6 +38,14 @@ export default async function Post({ params }: Props) {
         <div className="text-left w-full">
           {/* Post Title */}
           <h1 className="font-extrabold text-4xl mb-1">{postData.title}</h1>
+          <Image
+            priority
+            src={`/images/posts/${postData.image}`}
+            className="rounded-lg object-cover h-48 w-full"
+            height={600}
+            width={600}
+            alt="DevOps, un acelerador de la vida cotidiana"
+          />
           <div className="text-gray-500 font-medium text-2xl mb-5">
             <Date dateString={postData.date} />
           </div>

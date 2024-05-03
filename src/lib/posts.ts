@@ -19,6 +19,7 @@ import rehypeFormat from "rehype-format";
 import { unified } from "unified";
 import remarkHtml from "remark-html";
 import remarkGfm from "remark-gfm";
+import { cutText } from "./cut-text";
 
 // --------------------------------
 // GET THE PATH OF THE POSTS FOLDER
@@ -62,7 +63,8 @@ export function getSortedPostsData() {
     // Combine the data with the id
     return {
       id,
-      ...(matterResult.data as { date: string; title: string }),
+      content: cutText(matterResult.content, 15),
+      ...(matterResult.data as { date: string; title: string; image: string }),
     };
   });
 
@@ -137,6 +139,7 @@ export async function getPostData(id: string) {
     ...(matterResult.data as {
       date: string;
       title: string;
+      image: string;
       keywords: string[];
     }),
   };

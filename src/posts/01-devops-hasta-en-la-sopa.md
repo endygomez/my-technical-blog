@@ -1,5 +1,6 @@
 ---
 title: 'DevOps hasta en la "Sopa" 🍲'
+image: "01-devops-hasta-en-la-sopa.jpg"
 date: "2024-04-30"
 keywords:
   [
@@ -16,7 +17,7 @@ keywords:
   ]
 ---
 
-Mi pareja y yo salimos al mercado al menos una vez a la semana, y una de las compras más comunes que hacemos son las carnes para cubrir las proteínas del almuerzo, las cuales solemos pedir por porciones, y listas para congelar.
+Cuando mi pareja y yo salimos al mercado, una de las compras más comunes que hacemos son las carnes para cubrir las proteínas del almuerzo, las cuales solemos pedir por porciones, y listas para congelar.
 
 Quien nos atiende en el abasto, se encarga amablemente de colocar las porciones sobre plástico. Agrega una porción, da una vuelta, agrega otra porción, y así sucesivamente las agrupa una encima de otra hasta que finalmente las almacena en una bolsa. Repite el ciclo por cada tipo de carne hasta que terminamos nuestro pedido.
 
@@ -52,4 +53,4 @@ Si vemos el _almuerzo_ como un _producto de software_, el proceso de preparació
 
 Todo proceso por más complejo o simple que parezca podría ser re-evaluado, o incluso evaluado por primera vez, ya que hay acciones que hacemos en nuestro día a día en _"automático"_ (ya sea porque así nos lo enseñaron o porque con el tiempo nososotros mismos creamos ciertos hábitos). Podríamos sorprendernos encontrando fugas de tiempo, tareas que aportan poco valor (_TOIL_), y otros hallazgos que desde la observación nos llevarían a transformar y mejorar continuamente cualquier proceso.
 
-DevOps nos invita a estas reflexiones, en las que pasamos día a día buscando entregar software con calidad a nuestros clientes, y que si las llevamos a nuestras vidas nos invita a preguntarnos **¿Cuántas actividades de nuestras rutinas podríamos transformar para conseguir verdadero valor de nuestras acciones?**
+DevOps nos invita a estas reflexiones, en las que pasamos día a día buscando entregar software con calidad a nuestros clientes, y que si las llevamos a nuestras vidas nos invita a preguntarnos **¿Cuántas actividades podríamos transformar para conseguir verdadero valor de nuestras acciones?**

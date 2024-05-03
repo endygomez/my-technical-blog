@@ -6,7 +6,9 @@ import Image from "next/image";
 type AllPostsData = {
   date: string;
   title: string;
+  image: string;
   id: string;
+  content: string;
 }[];
 
 export default function Home() {
@@ -71,25 +73,63 @@ export default function Home() {
       <section className="col-start-2 col-span-10 text-gray-600 w-full h-full">
         <div className="text-left">
           <div className="font-semibold text-gray-900 leading-none">
-            <div className="text-left text-2xl">Mis Artículos</div>
-            <div className=" text-left md:text-xl">
-              <ul className="w-full">
-                {allPostsData.map(({ id, date, title }) => (
-                  <li key={id} className="my-7">
-                    <div className="font-medium mb-1">
-                      <Link
-                        href={`/posts/${id}`}
-                        className="text-blue-500 hover:underline text-2xl"
-                      >
+            <div className="text-left text-2xl mt-12">Mis Artículos</div>
+            <div className="text-left md:text-xl grid grid-cols-3 my-7">
+              {allPostsData.map(({ id, date, title, image, content }) => (
+                // <li key={id} className="my-7">
+                //   <div className="font-medium mb-1">
+                //     <div className="w-full grid grid-cols-12">
+                //       <Image
+                //         priority
+                //         src={`/images/posts/${image}`}
+                //         className="rounded-lg object-cover h-32 w-32 col-start-1 col-span-1"
+                //         height={150}
+                //         width={150}
+                //         alt="DevOps, un acelerador de la vida cotidiana"
+                //       />
+                //       <Link
+                //         href={`/posts/${id}`}
+                //         className="text-blue-500 hover:underline text-2xl col-start-2 col-span-12 flex h-full align-middle"
+                //       >
+                //         {title}
+                //       </Link>
+                //     </div>
+                //   </div>
+                //   <small className="text-gray-500">
+                //     <Date dateString={date} />
+                //   </small>
+                // </li>
+
+                <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w mb-5">
+                  <Link href={`/posts/${id}`}>
+                    <Image
+                      height={350}
+                      width={350}
+                      priority
+                      className="rounded-t-lg object-cover w-full"
+                      src={`/images/posts/${image}`}
+                      alt="DevOps, un acelerador de la vida cotidiana"
+                    />
+                  </Link>
+                  <div className="p-5">
+                    <a href="#">
+                      <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
                         {title}
-                      </Link>
-                    </div>
-                    <small className="text-gray-500">
-                      <Date dateString={date} />
-                    </small>
-                  </li>
-                ))}
-              </ul>
+                      </h5>
+                      <small className="text-gray-500">
+                        <Date dateString={date} />
+                      </small>
+                    </a>
+                    <p className="font-normal text-gray-700 mb-3">{content}</p>
+                    <Link
+                      className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
+                      href={`/posts/${id}`}
+                    >
+                      Leer más
+                    </Link>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
