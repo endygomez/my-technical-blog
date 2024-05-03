@@ -76,31 +76,10 @@ export default function Home() {
             <div className="text-left text-2xl mt-12">Mis Artículos</div>
             <div className="text-left md:text-xl grid grid-cols-3 my-7">
               {allPostsData.map(({ id, date, title, image, content }) => (
-                // <li key={id} className="my-7">
-                //   <div className="font-medium mb-1">
-                //     <div className="w-full grid grid-cols-12">
-                //       <Image
-                //         priority
-                //         src={`/images/posts/${image}`}
-                //         className="rounded-lg object-cover h-32 w-32 col-start-1 col-span-1"
-                //         height={150}
-                //         width={150}
-                //         alt="DevOps, un acelerador de la vida cotidiana"
-                //       />
-                //       <Link
-                //         href={`/posts/${id}`}
-                //         className="text-blue-500 hover:underline text-2xl col-start-2 col-span-12 flex h-full align-middle"
-                //       >
-                //         {title}
-                //       </Link>
-                //     </div>
-                //   </div>
-                //   <small className="text-gray-500">
-                //     <Date dateString={date} />
-                //   </small>
-                // </li>
-
-                <div className="bg-white shadow-md border border-gray-200 rounded-lg max-w mb-5">
+                <div
+                  key={id}
+                  className="bg-white shadow-md border border-gray-200 rounded-lg max-w mb-5"
+                >
                   <Link href={`/posts/${id}`}>
                     <Image
                       height={350}
