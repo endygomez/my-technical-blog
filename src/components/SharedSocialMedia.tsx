@@ -1,8 +1,8 @@
 "use client";
 
 import React from "react";
-import { FaFacebook, FaLinkedin, FaTwitter } from "react-icons/fa";
-import { FaX } from "react-icons/fa6";
+import { FaFacebook, FaLinkedin } from "react-icons/fa";
+import { FaX, FaXTwitter } from "react-icons/fa6";
 import { FiMail } from "react-icons/fi";
 import {
   EmailShareButton,
@@ -27,7 +27,7 @@ export const SharedSocialMedia = ({ articleUrl }: Props) => {
         <FaFacebook />
       </FacebookShareButton>
       <TwitterShareButton url={articleUrl} className="mr-2">
-        <FaX />
+        <FaXTwitter />
       </TwitterShareButton>
       {/* Otros botones de compartir según sea necesario */}
     </div>
