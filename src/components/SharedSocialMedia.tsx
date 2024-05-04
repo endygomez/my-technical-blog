@@ -13,10 +13,11 @@ import {
 
 interface Props {
   articleUrl: string;
+  className?: string;
 }
-export const SharedSocialMedia = ({ articleUrl }: Props) => {
+export const SharedSocialMedia = ({ articleUrl, className }: Props) => {
   return (
-    <div>
+    <div className={className}>
       <LinkedinShareButton url={articleUrl} className="mr-2">
         <FaLinkedin />
       </LinkedinShareButton>

@@ -3,6 +3,7 @@ import { SharedSocialMedia } from "@/components/SharedSocialMedia";
 
 import { getPostData } from "@/lib/posts";
 import Image from "next/image";
+import Link from "next/link";
 type Params = {
   id: string;
 };
@@ -60,8 +61,12 @@ export default async function Post({ params }: Props) {
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
           />
         </div>
-        <div className="flex justify-end text-gray-500 font-medium text-2xl">
+        <div className="flex text-gray-500 font-medium text-2xl">
+          <Link href="/" className="w-full justify-start text-blue-500">
+            ← Volver al inicio
+          </Link>
           <SharedSocialMedia
+            className="w-full flex justify-end"
             articleUrl={`https://endygomez.com/posts/${params.id}`}
           />
         </div>
