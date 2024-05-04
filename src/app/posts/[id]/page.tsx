@@ -3,11 +3,6 @@ import { SharedSocialMedia } from "@/components/SharedSocialMedia";
 
 import { getPostData } from "@/lib/posts";
 import Image from "next/image";
-import {
-  FacebookShareButton,
-  LinkedinShareButton,
-  TwitterShareButton,
-} from "react-share";
 type Params = {
   id: string;
 };
