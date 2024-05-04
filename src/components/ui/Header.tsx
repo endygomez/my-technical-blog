@@ -1,5 +1,7 @@
 "use client";
 
+import Image from "next/image";
+import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React from "react";
 
@@ -9,34 +11,34 @@ const Header = ({}: Props) => {
 
   return (
     <>
-      {pathName !== "/" && (
-        <header className="w-full sticky top-0 h-8 mb-8 bg-black">
-          <div className="flex flex-col items-center align-middle h-full w-full justify-center text-gray-200 tracking-widest">
-            Endy Gómez
+      <header className="w-full top-0 h-16 mb-8 bg-black">
+        <div className="grid grid-cols-3 h-full tracking-widest">
+          <div className="flex h-full justify-start align-middle items-center w-full text-center text-gray-200">
+            <Link href={"/"}>
+              <Image
+                src="/images/logo.png"
+                className="ml-16 h-16 w-16"
+                height={240}
+                width={240}
+                alt="Endy Gómez - Logo"
+              />
+            </Link>
           </div>
-
-          {/* <Link href="/" className="flex justify-center">
-          <Image
-            priority
-            src="/images/my-profile.jpg"
-            className="rounded-full"
-            height={pathName === "/" ? 200 : 108}
-            width={pathName === "/" ? 200 : 108}
-            alt=""
-          />
-        </Link> */}
-          {/* <div className="flex justify-center mt-2">
-          <Link
-            href="/"
-            className={`${
-              pathName === "/" ? "text-5xl" : "text-2xl"
-            } tracking-tighter font-medium`}
-          >
-            {name}
-          </Link>
-        </div> */}
-        </header>
-      )}
+          <div className="flex h-full justify-center align-middle items-center w-full text-gray-200">
+            <ul className="grid grid-cols-2 text-lg font-light">
+              {/* TODO: <li>
+                <Link href="#">SOBRE MI</Link>
+              </li>
+              <li className="flex justify-start pl-8">
+                <Link href="#">BLOG</Link>
+              </li> */}
+            </ul>
+          </div>
+          <div className="flex h-full justify-end align-middle items-center w-full text-center text-gray-200">
+            {/* TODO:Construir búsqueda */}
+          </div>
+        </div>
+      </header>
     </>
   );
 };

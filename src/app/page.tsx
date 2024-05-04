@@ -16,7 +16,7 @@ export default function Home() {
 
   return (
     <>
-      <section className="col-start-2 col-span-10 text-gray-600 flex pt-14 w-full justify-center">
+      <section className="col-start-2 col-span-10 text-gray-600 flex w-full justify-center">
         <div className="text-left">
           <div className="text-6xl font-semibold text-gray-900 leading-none">
             <div className="w-full flex justify-center">
@@ -74,7 +74,7 @@ export default function Home() {
         <div className="text-left">
           <div className="font-semibold text-gray-900 leading-none">
             <div className="text-left text-2xl mt-12">Mis Artículos</div>
-            <div className="text-left md:text-xl grid grid-cols-3 my-7">
+            <div className="text-left md:text-xl grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 my-7">
               {allPostsData.map(({ id, date, title, image, content }) => (
                 <div
                   key={id}
@@ -85,20 +85,20 @@ export default function Home() {
                       height={350}
                       width={350}
                       priority
-                      className="rounded-t-lg object-cover w-full"
+                      className="rounded-t-lg object-cover h-48 w-full"
                       src={`/images/posts/${image}`}
                       alt="DevOps, un acelerador de la vida cotidiana"
                     />
                   </Link>
                   <div className="p-5">
-                    <a href="#">
+                    <Link href={`/posts/${id}`}>
                       <h5 className="text-gray-900 font-bold text-2xl tracking-tight mb-2">
                         {title}
                       </h5>
                       <small className="text-gray-500">
                         <Date dateString={date} />
                       </small>
-                    </a>
+                    </Link>
                     <p className="font-normal text-gray-700 mb-3">{content}</p>
                     <Link
                       className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-3 py-2 text-center inline-flex items-center"
