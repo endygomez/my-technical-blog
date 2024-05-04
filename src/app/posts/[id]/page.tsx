@@ -42,14 +42,16 @@ export default async function Post({ params }: Props) {
           <Image
             priority
             src={`/images/posts/${postData.image}`}
-            className="rounded-lg object-cover h-48 w-full"
+            className="rounded-lg object-cover h-48 w-full mb-0 pb-2"
             height={600}
             width={600}
             alt="DevOps, un acelerador de la vida cotidiana"
           />
-          <div className="text-gray-500 font-medium text-2xl mb-5 grid grid-cols-2 justify-between">
-            <Date dateString={postData.date} />
-            <div className="flex justify-end">
+          <div className="text-gray-500 font-medium text-2xl mb-1 grid grid-cols-2 justify-between">
+            <span className="text-sm flex align-middle h-full items-center">
+              <Date dateString={postData.date} />
+            </span>
+            <div className="flex justify-end align-middle h-full items-center">
               <SharedSocialMedia
                 articleUrl={`https://endygomez.com/posts/${params.id}`}
               />
