@@ -1,8 +1,13 @@
 import Date from "@/components/Date";
+import { SharedSocialMedia } from "@/components/SharedSocialMedia";
 
 import { getPostData } from "@/lib/posts";
 import Image from "next/image";
-
+import {
+  FacebookShareButton,
+  LinkedinShareButton,
+  TwitterShareButton,
+} from "react-share";
 type Params = {
   id: string;
 };
@@ -46,13 +51,23 @@ export default async function Post({ params }: Props) {
             width={600}
             alt="DevOps, un acelerador de la vida cotidiana"
           />
-          <div className="text-gray-500 font-medium text-2xl mb-5">
+          <div className="text-gray-500 font-medium text-2xl mb-5 grid grid-cols-2 justify-between">
             <Date dateString={postData.date} />
+            <div className="flex justify-end">
+              <SharedSocialMedia
+                articleUrl={`https://endygomez.com/posts/${params.id}`}
+              />
+            </div>
           </div>
           {/* Post Content */}
           <div
             className="text-gray-600 w-full"
             dangerouslySetInnerHTML={{ __html: postData.contentHtml }}
+          />
+        </div>
+        <div className="flex justify-end text-gray-500 font-medium text-2xl">
+          <SharedSocialMedia
+            articleUrl={`https://endygomez.com/posts/${params.id}`}
           />
         </div>
       </article>
