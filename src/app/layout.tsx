@@ -8,6 +8,9 @@ import { GoogleAnalytics } from "@/components/GoogleAnalytics";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
+  icons: {
+    icon: "/images/favicon.ico",
+  },
   title: "Endy Gómez - DevOps Expert",
   description:
     "Endy Gómez es un Desarrollador de Software experto en DevOps. Él es un apasionado de la tecnología y le gusta compartir conocimiento con otras personas.",
