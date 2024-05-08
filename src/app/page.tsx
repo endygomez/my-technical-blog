@@ -74,7 +74,7 @@ export default function Home() {
         <div className="text-left">
           <div className="font-semibold text-gray-900 leading-none">
             <div className="text-left text-2xl mt-12">Mis Artículos</div>
-            <div className="text-left md:text-xl grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 my-7">
+            <div className="text-left md:text-xl grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 my-7 gap-12">
               {allPostsData.map(({ id, date, title, image, content }) => (
                 <div
                   key={id}

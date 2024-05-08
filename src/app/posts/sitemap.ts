@@ -4,7 +4,13 @@ import { MetadataRoute } from "next";
 
 export async function generateSitemaps() {
   // Fetch the total number of products and calculate the number of sitemaps needed
-  return [{ id: 0 }, { id: 1 }, { id: 2 }, { id: 3 }];
+  const posts = await getSortedPostsData();
+  let sitemaps: { id: number }[] = [];
+  for (let index = 0; index < posts.length; index++) {
+    sitemaps.push({ id: index });
+  }
+
+  return sitemaps;
 }
 
 export default async function sitemap({
