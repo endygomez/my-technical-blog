@@ -1,5 +1,5 @@
 ---
-title: "¿Cómo explicar DevOps de manera sencilla a personas no técnicas?: Una guía práctica"
+title: "¿Cómo explicar DevOps de manera sencilla a personas no técnicas?: Una guía práctica 📝"
 image: "03-como-explicar-devops-de-manera-sencilla-a-personas-no-tecnicas.jpg"
 meta-description: Aprende cómo explicar DevOps de manera sencilla a personas no técnicas con esta guía práctica, usando analogías y ejemplos claros
 date: "2024-05-17"
