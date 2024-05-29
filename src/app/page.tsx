@@ -16,56 +16,50 @@ export default function Home() {
 
   return (
     <>
-      <section className="col-start-2 col-span-10 text-gray-600 flex w-full justify-center">
-        <div className="text-left">
-          <div className="text-6xl font-semibold text-gray-900 leading-none">
-            <div className="w-full flex justify-center">
-              <Image
-                priority
-                src="/images/my-profile.jpg"
-                className="rounded-full"
-                height={170}
-                width={170}
-                alt="Foto de Perfil"
-              />
-            </div>
-            <div className="text-center sm:text-xl pt-6">Endy Gómez</div>
-          </div>
-          <div className="mt-6 lg:text-3xl md:text-5xl font-light text-true-gray-500 antialiased tracking-wider">
-            <b>Experto DevOps</b> especializado en automatización de procesos de{" "}
-            <i>construcción</i>, <i>entrega</i> y <i>despliegue</i> de software
-            para <b>PYMES</b> y <b>GRANDES EMPRESAS</b>. Encuéntrame en{" "}
+      <section className="bg-white dark:bg-gray-900 col-start-2 col-span-10 text-gray-600 flex w-full justify-center">
+        <div className="grid max-w-screen-xl px-4 py-8 mx-auto lg:gap-8 xl:gap-0 lg:py-16 lg:grid-cols-12">
+          <div className="mr-auto place-self-center lg:col-span-7">
+            <h1 className="max-w-2xl mb-4 text-4xl font-extrabold tracking-tight leading-none md:text-5xl xl:text-6xl dark:text-white">
+              Acelero tus procesos de TI con soluciones DevOps eficientes
+            </h1>
+            <p className="max-w-2xl mb-6 font-light text-gray-500 lg:mb-8 md:text-lg lg:text-xl dark:text-gray-400">
+              Impulso el time-to-market empresarial optimizando tu desarrollo de
+              software.
+            </p>
             <Link
-              href="https://www.linkedin.com/in/gomezendy/"
-              className="text-blue-500 hover:underline"
+              href="#my-articles"
+              className="inline-flex items-center justify-center px-5 py-3 mr-3 text-base font-medium text-center text-white rounded-lg bg-primary-700 hover:bg-primary-800 focus:ring-4 focus:ring-primary-300 dark:focus:ring-primary-900"
+            >
+              Mis Artículos
+              <svg
+                className="w-5 h-5 ml-2 -mr-1"
+                fill="currentColor"
+                viewBox="0 0 20 20"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  fill-rule="evenodd"
+                  d="M10.293 3.293a1 1 0 011.414 0l6 6a1 1 0 010 1.414l-6 6a1 1 0 01-1.414-1.414L14.586 11H3a1 1 0 110-2h11.586l-4.293-4.293a1 1 0 010-1.414z"
+                  clip-rule="evenodd"
+                ></path>
+              </svg>
+            </Link>
+            <Link
+              href="https://calendly.com/endygomez_dev/desafios_devops"
+              className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-gray-900 border border-gray-300 rounded-lg hover:bg-gray-100 focus:ring-4 focus:ring-gray-100 dark:text-white dark:border-gray-700 dark:hover:bg-gray-700 dark:focus:ring-gray-800"
               target="_blank"
             >
-              LinkedIn
+              Conversemos
             </Link>
-            .
-            <button
-              type="button"
-              role="button"
-              aria-label="Mis artículos"
-              className="flex items-center justify-center w-12 h-12 pt-12 rounded-full bg-cool-gray-100 text-gray-800 animate-bounce hover:text-gray-900 hover:bg-cool-green-50 transition duration-300 ease-in-out cursor-pointer"
-            >
-              <Link href={"#my-articles"}>
-                <svg
-                  className="w-10 h-10 text-blue-500"
-                  fill="none"
-                  stroke="currentColor"
-                  viewBox="0 0 24 24"
-                  xmlns="http://www.w3.org/2000/svg"
-                >
-                  <path
-                    strokeLinecap="round"
-                    strokeLinejoin="round"
-                    strokeWidth="2"
-                    d="M19 14l-7 7m0 0l-7-7m7 7V3"
-                  ></path>
-                </svg>
-              </Link>
-            </button>
+          </div>
+          <div className="hidden lg:mt-0 lg:col-span-5 lg:flex">
+            <Image
+              priority
+              src="/images/my-profile.png"
+              height={500}
+              width={500}
+              alt="Foto de Perfil"
+            />
           </div>
         </div>
       </section>
@@ -73,7 +67,9 @@ export default function Home() {
       <section className="col-start-2 col-span-10 text-gray-600 w-full h-full">
         <div className="text-left">
           <div className="font-semibold text-gray-900 leading-none">
-            <div className="text-left text-2xl mt-12">Mis Artículos</div>
+            <div className="text-left text-2xl mt-12" id="my-articles">
+              Mis Artículos
+            </div>
             <div className="text-left md:text-xl grid 2xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 my-7 gap-12">
               {allPostsData.map(({ id, date, title, image, content }) => (
                 <div
