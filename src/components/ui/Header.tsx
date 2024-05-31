@@ -11,7 +11,7 @@ const Header = ({}: Props) => {
 
   return (
     <>
-      <header className="w-full top-0 h-16 mb-8 bg-black">
+      <header className="w-full top-0 h-16 bg-primary-700">
         <div className="grid grid-cols-3 h-full tracking-widest">
           <div className="flex h-full justify-start align-middle items-center w-full text-center text-gray-200">
             <Link href={"/"}>

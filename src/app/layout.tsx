@@ -36,7 +36,7 @@ export default function RootLayout({
       <body className={inter.className}>
         <Header />
 
-        <main className="grid grid-cols-12 w-full text-left h-full min-h-screen">
+        <main className="grid grid-cols-12 w-full text-left h-full min-h-screen bg-white">
           {children}
         </main>
 
